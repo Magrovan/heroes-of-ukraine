@@ -21,6 +21,7 @@ body::before {
     z-index: -1;
 }
 
+/* Header */
 header {
     position: fixed;
     top: 0;
@@ -63,6 +64,7 @@ header nav ul li a:hover {
     color: #ffcc00;
 }
 
+/* Main */
 main {
     flex: 1;
     margin-top: 80px;
@@ -145,6 +147,7 @@ main .content h2 {
     margin: 10px 0;
 }
 
+/* Footer */
 footer {
     background: #000000;
     padding: 10px 20px;
@@ -165,4 +168,58 @@ footer h2 {
 footer p {
     font-size: 0.9rem;
     color: #ffffff;
+}
+
+/* Адаптивність */
+
+/* Планшети (до 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .hero-card, .news-card {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Телефони (до 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav ul {
+        gap: 5px;
+    }
+
+    .hero-card, .news-card {
+        width: 100%;
+    }
+
+    main {
+        padding: 5px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* Зображення */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
