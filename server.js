@@ -81,3 +81,9 @@ app.listen(PORT, () => {
 app.get("/", (req, res) => {
     res.send("Сервер працює! Ви можете почати роботу з API.");
 });
+mongoose
+    .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log("Підключено до MongoDB Atlas"))
+    .catch((error) => {
+        console.error("Помилка підключення до MongoDB Atlas:", error);
+    });
