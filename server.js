@@ -45,4 +45,3 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
     console.log(`Сервер працює на http://localhost:${PORT}`);
 });
-
