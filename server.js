@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
+const uri = "mongodb+srv://dmitromagrovan:<Dmutruk3110>@heroesdb.dtgpb.mongodb.net/?retryWrites=true&w=majority&appName=heroesDB";
 
 const app = express();
 const PORT = 5000;
